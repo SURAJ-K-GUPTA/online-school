@@ -1,8 +1,8 @@
 require('dotenv').config();
 const express = require("express");
 const cors = require("cors")
-const Class = require("./models/class/class");
-const Subject = require("./models/subject/subject");
+const Class = require("./models/class/Class");
+const Subject = require("./models/subject/Subject");
 const Topic = require("./models/topic/Topic");
 const SubTopic = require("./models/subTopic/SubTopic");
 const Video = require("./models/video/Video");
