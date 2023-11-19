@@ -15,7 +15,6 @@ app.use(cors())
 
 app.use(express.json()); //pass incoming data
 app.use(express.urlencoded({ extended: true })); //pass form data
-app.use(express.static('build'))
 
 
 app.get("/classes", async (req, res) => {
