@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "server": "nodemon server.js",
     "start": "node server.js",
-    "server": "nodemon server.js", 
+    "build": "babel src -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,6 +21,8 @@
     "mongoose": "^8.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
     "nodemon": "^3.0.1"
   }
 }
