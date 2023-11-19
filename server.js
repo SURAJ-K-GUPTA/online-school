@@ -197,9 +197,7 @@ app.post("/videos", async (req, res) => {
     res.json({ error: error.message });
   }
 });
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+
 
 
 const PORT = process.env.PORT || 9000;
