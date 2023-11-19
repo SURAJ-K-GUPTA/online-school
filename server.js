@@ -16,23 +16,7 @@ app.use(cors())
 app.use(express.json()); //pass incoming data
 app.use(express.urlencoded({ extended: true })); //pass form data
 app.use(express.static('build'))
-app.get("/", async (req, res) => {
-  try {
-    const api = await Class.find().populate({
-      path: "subjects",
-      populate: {
-        path: "topics",
-        populate: {
-          path: "subTopics",
-          populate: [{ path: "videos" }, { path: "questions" }],
-        },
-      },
-    });
-    res.json(api);
-  } catch (error) {
-    res.json({ error: error.message });
-  }
-});
+
 
 app.get("/classes", async (req, res) => {
   try {
@@ -214,6 +198,10 @@ app.post("/videos", async (req, res) => {
     res.json({ error: error.message });
   }
 });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, console.log(`Server is running on PORT ${PORT}`));
