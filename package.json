@@ -2,10 +2,10 @@
   "name": "vignam-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js",
-    "start": "node server.js",
+    "server": "nodemon index.js",
+    "start": "node index.js",
     "build": "babel src -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
